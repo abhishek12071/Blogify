@@ -6,13 +6,16 @@ import { API } from "../../service/api";
 import { DataContext } from "../../context/DataProvider";
 
 import { useNavigate } from "react-router-dom";
+import background from "./img/LHTC1.jpg";
 
 const Component = styled(Box)`
   width: 400px;
+  display:block;
   margin: auto;
   box-shadow: 5px 2px 5px 2px rgb(0 0 0/0.6);
+  background-color:white;
+  z-index:1;
 `;
-
 const Image = styled("img")({
   width: 100,
   margin: "auto",
@@ -93,61 +96,63 @@ const Login = ({ isUserAuthenticated }) => {
   const imageURL =
     "https://www.sesta.it/wp-content/uploads/2021/03/logo-blog-sesta-trasparente.png";
 
-    
-    
-    const onValueChange = (e) => {
-      setLogin({ ...login, [e.target.name]: e.target.value });
-    };
-    const onInputChange = (e) => {
-      setSignup({ ...signup, [e.target.name]: e.target.value });
-    };
-    
-    const loginUser = async () => {
-      let response = await API.userLogin(login);
-      if (response.isSuccess) {
-        setError("");
-        sessionStorage.setItem(
-          "accessToken",
-          `Bearer ${response.data.accessToken}`
+
+
+  const onValueChange = (e) => {
+    setLogin({ ...login, [e.target.name]: e.target.value });
+  };
+  const onInputChange = (e) => {
+    setSignup({ ...signup, [e.target.name]: e.target.value });
+  };
+
+  const loginUser = async () => {
+    let response = await API.userLogin(login);
+    if (response.isSuccess) {
+      setError("");
+      sessionStorage.setItem(
+        "accessToken",
+        `Bearer ${response.data.accessToken}`
       );
       sessionStorage.setItem(
         "refreshToken",
         `Bearer ${response.data.refreshToken}`
-        );
-        
-        setAccount({
-          username: response.data.username,
-          name: response.data.name
-        });
-        isUserAuthenticated(true);
-        navigate("/");
-      } else {
-        setError("Something went wrong!Please try again later.");
-      }
-    };
+      );
 
-    const signupUser = async () => {
-      let response = await API.userSignup(signup);
-      if (response.isSuccess) {
-        setError("");
-        setSignup(signupInitialValues);
-        toggleAccount("login");
-      } else {
-        setError("Something went wrong. Please try again later.");
-      }
-    };
-    
-    
-    
-    const toggleSignup = () => {
-      account === "signup" ? toggleAccount("login") : toggleAccount("signup");
-    };
+      setAccount({
+        username: response.data.username,
+        name: response.data.name
+      });
+      isUserAuthenticated(true);
+      navigate("/");
+    } else {
+      setError("Something went wrong!Please try again later.");
+    }
+  };
 
-    return (
-      <Component>
-      <Box>
+  const signupUser = async () => {
+    let response = await API.userSignup(signup);
+    if (response.isSuccess) {
+      setError("");
+      setSignup(signupInitialValues);
+      toggleAccount("login");
+    } else {
+      setError("Something went wrong. Please try again later.");
+    }
+  };
+
+
+
+  const toggleSignup = () => {
+    account === "signup" ? toggleAccount("login") : toggleAccount("signup");
+  };
+
+  return (
+    <Box style={{
+      backgroundImage: `url(${background})`, width: '100%', height: '790px',marginTop:'-65px', backgroundSize:'cover'
+  }}>
+    <Component>
         <Image src={imageURL} alt="blog" />
-        {account === "login" ? 
+        {account === "login" ?
           <Wrapper>
             <TextField
               variant="standard"
@@ -168,11 +173,11 @@ const Login = ({ isUserAuthenticated }) => {
               Login
             </LoginButton>
             <Text style={{ textAlign: "center" }}>OR</Text>
-            <SignupButton onClick={() => toggleSignup()} style = {{marginBottom:50}}>
+            <SignupButton onClick={() => toggleSignup()} style={{ marginBottom: 50 }}>
               Create an account
             </SignupButton>
           </Wrapper>
-         : 
+          :
           <Wrapper>
             <TextField
               variant="standard"
@@ -201,8 +206,8 @@ const Login = ({ isUserAuthenticated }) => {
             </LoginButton>
           </Wrapper>
         }
-      </Box>
     </Component>
+    </Box>
   );
 };
 

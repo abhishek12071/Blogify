@@ -1,6 +1,6 @@
 import { Box, styled, Typography, Link } from '@mui/material';
 import { GitHub, Instagram, Email } from '@mui/icons-material';
-
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 const Banner = styled(Box)`
     background-image: url(http://mrtaba.ir/image/bg2.jpg);
     width: 100%;
@@ -26,13 +26,13 @@ const Contact = () => {
         <Box>
             <Banner />
             <Wrapper>
-                <Typography variant="h3">Getting in touch is easy!</Typography>    
+                <Typography variant="h3">Getting in touch is easy!</Typography>
                 <Text variant="h5">
                     Reach out to me on
                     <Link href="https://www.linkedin.com/in/abhishek-kumar-gupta-7b2291217/" color="inherit" target="_blank">
-                        <Instagram/>
+                        <LinkedInIcon />
                     </Link>
-                     or send me an Email on 20bcs012@iiitdmj.ac.in
+                    or send me an Email on  <Email /> 20bcs012@iiitdmj.ac.in
                 </Text>
             </Wrapper>
         </Box>
