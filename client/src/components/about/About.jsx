@@ -24,27 +24,30 @@ const About = () => {
 
     return (
         <Box>
-            <Banner/>
+            <Banner />
             <Wrapper>
-                <Typography variant="h3">Code for Interview</Typography>
-                <Text variant="h5">I'm a Software Engineer based in India. 
-                    I've built websites, desktop applications and corporate software.<br />
-                    If you are interested, you can view some of my favorite projects here
+                <Typography variant="h3">Blogify</Typography>
+                <Text variant="h5">• Designed and implemented a user-friendly platform enabling individuals to create, edit and share journal entries
+                    inclusive of multimedia content, fostering an engaging and interactive community
+                    <br />
+                    • React, Node, Express, MongoDB was used to build the website.
+                    <br />
+                    • 10+ prominent features including login/sign-up, view, create, delete and comment on others blog etc, used JWT
+                    authentication for login.
+                    <br />
+                    Repository Link:
                     <Box component="span" style={{ marginLeft: 5 }}>
-                        <Link href="https://github.com/kunaltyagi9" color="inherit" target="_blank"><GitHub /></Link>
+                        <Link href="https://github.com/abhishek12071/Blogify" color="inherit" target="_blank"><GitHub /></Link>
                     </Box>
                 </Text>
                 <Text variant="h5">
                     Need something built or simply want to have chat? Reach out to me on
                     <Box component="span" style={{ marginLeft: 5 }}>
-                        <Link href="https://www.instagram.com/codeforinterview/" color="inherit" target="_blank">
+                        <Link href="https://www.linkedin.com/in/abhishek-kumar-gupta-7b2291217/" color="inherit" target="_blank">
                             <Instagram />
                         </Link>
-                    </Box>  
-                        or send me an Email 
-                        <Link href="mailto:codeforinterview@gmail.com?Subject=This is a subject" target="_blank" color="inherit">
-                            <Email />
-                        </Link>.
+                    </Box>
+                    or send me an Email on 20bcs012@iiitdmj.ac.in
                 </Text>
             </Wrapper>
         </Box>

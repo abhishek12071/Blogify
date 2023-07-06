@@ -29,13 +29,10 @@ const Contact = () => {
                 <Typography variant="h3">Getting in touch is easy!</Typography>    
                 <Text variant="h5">
                     Reach out to me on
-                    <Link href="https://www.instagram.com/codeforinterview/" color="inherit" target="_blank">
+                    <Link href="https://www.linkedin.com/in/abhishek-kumar-gupta-7b2291217/" color="inherit" target="_blank">
                         <Instagram/>
                     </Link>
-                    or send me an Email 
-                    <Link href="mailto:codeforinterview@gmail.com?Subject=This is a subject" target="_blank" color="inherit">
-                        <Email />
-                    </Link>.
+                     or send me an Email on 20bcs012@iiitdmj.ac.in
                 </Text>
             </Wrapper>
         </Box>
