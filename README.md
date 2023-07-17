@@ -1,5 +1,5 @@
 # Blogify
-Developed a full-stack blog application using the MERN (MongoDB, Express.js, React.js, Node.js) stack. Implemented key features such as user login/signup, blog creation, viewing, deletion, and commenting on others' blogs. Employed JWT (JSON Web Token) authentication for secure login functionality.
+Developed a full-stack blog application using the MERN (MongoDB, Express.js, React.js, Node.js) stack. Implemented key features such as user login/signup, blog creation, viewing, deletion, and commenting on others' blogs. Employed JWT (JSON Web Token) authentication for secure login functionality.To have a demo click on https://youtu.be/pLVXfM44fAA
 
 
 1) Implemented a seamless user experience where new users are required to sign up before gaining access to the publishing feature. After signing up, users can securely log in to the application.
@@ -28,4 +28,3 @@ Developed a full-stack blog application using the MERN (MongoDB, Express.js, Rea
    ![Screenshot (108)](https://github.com/abhishek12071/Blogify/assets/92369178/35d6af5a-9ca4-423f-871d-f934c7992f4d)
 
 
-   To have a demo click on https://youtu.be/pLVXfM44fAA
